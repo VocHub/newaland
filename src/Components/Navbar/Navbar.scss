@@ -1,0 +1,65 @@
+@import '../../global_styles.scss';
+
+#navbar-component {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(225, 225, 225, 0.349);
+  backdrop-filter: blur(5px);
+  top: 25%;
+  left: 0;
+  width: 130px;
+  height: 30%;
+  z-index: 1000;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  // cursor: pointer;
+}
+
+.navbar {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item div {
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+.swap-icon-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: auto;
+
+  img {
+    height: 100%;
+    width: auto;
+    cursor: pointer;
+  }
+}
+
+.swap-toggle-true {
+  transform: rotate(180deg);
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+.swap-toggle-false {
+  transform: rotate(0deg);
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}

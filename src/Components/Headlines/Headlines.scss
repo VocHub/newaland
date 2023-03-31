@@ -1,0 +1,58 @@
+@import '../../_global_styles.scss';
+
+.headlines {
+  &__component {
+    height: 100%;
+  }
+
+  &__container {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__headline {
+    position: relative;
+    font-size: 20px;
+    letter-spacing: .15em;
+    & h6 {
+      cursor: pointer;
+      font-weight: 500;
+    }
+    & a {
+      color: orangered;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: bolder;
+    }
+  }
+
+  &__wrapper {
+    cursor: pointer;
+  }
+}
+
+.show-snippet-true {
+  opacity: 1;
+  height: 100%;
+  font-size: 14px;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+
+.show-snippet-false {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  font-size: 14px;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}

@@ -1,0 +1,65 @@
+@import './_global_styles.scss';
+
+* {
+  box-sizing: border-box;
+  cursor: default;
+}
+
+::selection {
+  background: #F4F7BE;
+}
+
+::-moz-selection {
+  background: #F4F7BE;
+}
+
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: #ADADAD;
+  border-radius: 100vw;
+  margin-block: -.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8F2600;
+  border: .25em solid #ADADAD;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8F2600;
+}
+
+
+html {
+  padding: 40px;
+  scroll-behavior: smooth;
+  background: $-theme-background;
+  overflow-x: hidden;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.app {
+  &__header {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+  }
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  margin-left: 40px;
+  img{
+    width: 100%;
+  }
+}
+

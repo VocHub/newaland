@@ -1,0 +1,261 @@
+@import '../../global_styles.scss';
+
+.newsModule {
+  &__articles-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    & .headlines-module-wrapper {
+      height: 100%;
+    }
+  }
+
+  &__table-header {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    margin-bottom: 40px;
+    align-items: center;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      & input {
+        width: 80%;
+        margin: auto;
+      }
+
+      & button {
+        position: relative;
+        width: 100px;
+        height: 50px;
+        margin: 10px auto;
+        background: rgb(53, 53, 53);
+        cursor: pointer;
+        color: $-theme-text-primary-color;
+        overflow: hidden;
+      }
+
+      & button::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(60deg, transparent, rgb(228, 228, 228), transparent);
+        transform: translateX(-120%);
+        -webkit-transform: translateX(-120%);
+        -moz-transform: translateX(-120%);
+        -ms-transform: translateX(-120%);
+        -o-transform: translateX(-120%);
+        transition: .0s;
+        -webkit-transition: .0s;
+        -moz-transition: .0s;
+        -ms-transition: .0s;
+        -o-transition: .0s;
+      }
+
+      & button:hover::after {
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        transition: .25s;
+        -webkit-transition: .25s;
+        -moz-transition: .25s;
+        -ms-transition: .25s;
+        -o-transition: .25s;
+      }
+
+      .form-buttons-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+  }
+
+  &__article {
+    border: 1px solid black;
+    padding: 0px 40px;
+    height: 500px;
+    overflow-y: auto;
+
+    & header {
+      position: sticky;
+      padding-top: 20px;
+      top: 0px;
+      border-bottom: 1px solid black;
+      height: 20%;
+      z-index: 5;
+
+      & h5 {
+        margin: 10px 0;
+      }
+    }
+  }
+
+  &__source {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+.focused-terms {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 75px;
+
+  & h3 {
+    margin: 0;
+  }
+
+  & p {
+    margin: 0;
+  }
+}
+
+.row-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: space-between;
+}
+
+
+#word-highlight {
+  input {
+    cursor: auto;
+  }
+
+}
+
+#cnn {
+  background-color: $-theme-cnn;
+
+  &::-webkit-scrollbar-track {
+    background: #FF5C5C;
+    margin-block: initial;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    -webkit-border-radius: 0px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #A30000;
+    border: none;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    -webkit-border-radius: 0px;
+  }
+
+  header {
+    background: $-theme-cnn;
+  }
+}
+
+#foxnews {
+  background-color: $-theme-foxnews;
+
+  &::-webkit-scrollbar-track {
+    background: #4F8ABA;
+    margin-block: initial;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    -webkit-border-radius: 0px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #2E5576;
+    border: none;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    -webkit-border-radius: 0px;
+  }
+
+  header {
+    background: $-theme-foxnews;
+  }
+}
+
+#nyt {
+  background-color: $-theme-nyt;
+
+  &::-webkit-scrollbar-track {
+    background: #FF6933;
+    margin-block: initial;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    -webkit-border-radius: 0px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #A32C00;
+    border: none;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    -webkit-border-radius: 0px;
+  }
+
+  header {
+    background: $-theme-nyt;
+  }
+}
+
+#reuters {
+  background-color: $-theme-reuters;
+
+  &::-webkit-scrollbar-track {
+    background: #9271AD;
+    margin-block: initial;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    -webkit-border-radius: 0px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #5E4375;
+    border: none;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    -webkit-border-radius: 0px;
+  }
+
+  header {
+    background: $-theme-reuters;
+  }
+}
+
+.user-highlight {
+  background-color: #FFD700;
+  color: #000000;
+}
